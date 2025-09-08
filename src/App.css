@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'Helvetica';
+
+    src: url('./helvetica-font/HelveticaNeueBlack.otf') format('woff2'),
+        url('./helvetica-font/HelveticaNeueBold.otf') format('woff'),
+        url('./helvetica-font/HelveticaNeueMedium.otf') format('woff'), ;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.helvetica_font {
+    font-family: 'Helvetica';
+    font-style: Regular;
+    font-weight: 400;
+}
+
+.App {
+    display: flex;
+    height: 100vh;
+}
