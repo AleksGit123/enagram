@@ -1,19 +1,26 @@
 .menu {
     display: flex;
     flex-direction: column;
-    row-gap: 53px;
-    border: 2px solid red;
-    width: 240px;
+    justify-content: space-between;
+    width: 19%;
     background-color: #132450;
-    padding: 45px 0 0 24px;
+    padding-top: 45px;
+
 }
 
 .site__logo {
     width: 110px;
     height: 44px;
+    cursor: pointer;
 }
 
 /* page navigator */
+.page__nav {
+    display: flex;
+    flex-direction: column;
+    row-gap: 53px;
+    padding-left: 24px;
+}
 
 .page {
     font-weight: 400;
@@ -29,6 +36,20 @@
     display: flex;
     flex-direction: column;
     row-gap: 32px;
+    /* border: 2px solid green; */
+}
+
+.page__nav__list::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 38px;
+    /* left: -10px; */
+    height: 60px;
+    width: 250px;
+    background-color: #FFFFFF;
+    border-radius: 55px 55px 55px 55px;
+    /* border: 2px solid red; */
 }
 
 .page__nav__item {
@@ -36,5 +57,32 @@
     align-items: center;
     column-gap: 9px;
     z-index: 100;
+    padding-left: 12px;
+    cursor: pointer;
+}
 
+.active {
+    color: #132450;
+}
+
+.account {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    border-top: 2px solid #9EB9FF33;
+    padding: 20px 12px;
+}
+
+.user {
+    display: flex;
+    column-gap: 5px;
+    align-items: center;
+}
+
+.user__name {
+    color: #FFFFFF;
+}
+
+.dots {
+    cursor: pointer;
 }

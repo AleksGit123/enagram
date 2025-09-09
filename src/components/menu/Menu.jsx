@@ -1,12 +1,13 @@
 import React from "react";
 import "./menu.css";
-import siteLogo from "./media/logo.svg";
 import Navbar from "./Navbar";
+import Account from "./Account";
 const Menu = () => {
   return (
     <section className="menu">
-      <img src={siteLogo} alt="sitelogo" className="site__logo" />
+      
       <Navbar />
+      <Account />
     </section>
   );
 };
