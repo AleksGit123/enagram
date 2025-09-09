@@ -1,25 +1,33 @@
 .menu {
+    position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    width: 19%;
+    row-gap: 53px;
+    width: 270px;
+    height: 695px;
     background-color: #132450;
     padding-top: 45px;
-
+    overflow-x: hidden;
 }
 
 .site__logo {
     width: 110px;
     height: 44px;
     cursor: pointer;
+    transform: translateX(10px);
+}
+
+.burger__menu {
+    cursor: pointer;
 }
 
 /* page navigator */
 .page__nav {
     display: flex;
+    align-items: baseline;
     flex-direction: column;
     row-gap: 53px;
-    padding-left: 24px;
+    padding-left: 10px;
 }
 
 .page {
@@ -35,29 +43,26 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    row-gap: 32px;
-    /* border: 2px solid green; */
+    row-gap: 40px;
 }
 
 .page__nav__list::before {
     content: "";
     display: block;
     position: absolute;
-    top: 38px;
-    /* left: -10px; */
+    top: 44px;
     height: 60px;
-    width: 250px;
+    width: 350px;
     background-color: #FFFFFF;
     border-radius: 55px 55px 55px 55px;
-    /* border: 2px solid red; */
 }
 
 .page__nav__item {
     display: flex;
     align-items: center;
-    column-gap: 9px;
+    column-gap: 5px;
     z-index: 100;
-    padding-left: 12px;
+    padding-left: 10px;
     cursor: pointer;
 }
 
@@ -66,6 +71,8 @@
 }
 
 .account {
+    position: absolute;
+    bottom: 0;
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -85,4 +92,32 @@
 
 .dots {
     cursor: pointer;
+}
+
+
+@media(max-width:768px) {
+    .menu {
+        width: 100%;
+        height: 70px;
+        padding: 12px 30px;
+        justify-content: space-between;
+    }
+
+    .menu__div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .page__nav {
+        display: none;
+    }
+
+    .page__nav__list::before {
+        display: none;
+    }
+
+    .account {
+        display: none;
+    }
 }

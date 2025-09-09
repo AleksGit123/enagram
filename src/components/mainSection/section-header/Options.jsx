@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import arrow from "../arrowDown.svg";
+import checkIcon from "./check-solid-full.svg";
 const Options = () => {
   const [checked, setChecked] = useState(false);
 
@@ -11,8 +12,10 @@ const Options = () => {
       </div>
 
       <div className="checkbox__div" onClick={() => setChecked(!checked)}>
-        <div className={`checkbox ${checked ? "checked" : ""}`}></div>
-        
+        <div className={`checkbox ${checked ? "checked" : ""}`}>
+          <img src={checkIcon} alt="check-icon" className="check__icon" />
+        </div>
+
         <p className="checkbox__text helvetica_font">ფორმატის შენარჩუნება</p>
       </div>
     </div>

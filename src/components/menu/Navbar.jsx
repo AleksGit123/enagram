@@ -4,14 +4,13 @@ import text from "./media/text.svg";
 import mic from "./media/mic.svg";
 import alignCenter from "./media/align-center.svg";
 import document from "./media/programming-code-document.svg";
-import siteLogo from "./media/logo.svg";
 
 import arrowRight from "./media/arrow-right.svg";
 
 const Navbar = () => {
   return (
     <nav className="page__nav">
-      <img src={siteLogo} alt="sitelogo" className="site__logo" />
+      
       <ul className="page__nav__list">
         <li className="page__nav__item">
           <img src={check} alt="check-icon" className="page__nav__item__icon" />
