@@ -1,5 +1,6 @@
 .main__section {
     width: 100%;
+    height: fit-content;
     padding: 24px 40px 0 24px;
 }
 
@@ -122,11 +123,11 @@
 
 @media(max-width:768px) {
     .main__section {
-        padding: 20px 12px;
+        padding: 15px 12px;
     }
 
     .section__header {
-        column-gap: 40px;
+        column-gap: 20px;
     }
 
     .options {
@@ -152,9 +153,53 @@
 
     .add__new {
         width: 150px;
+        padding-inline: 10px;
     }
 
     .add__new__text {
         font-size: 12px;
     }
+}
+
+@media(max-width:570px) {
+    .section__header {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 20px;
+        height: fit-content;
+        padding: 0;
+    }
+
+    .options {
+        flex-direction: column;
+        row-gap: 20px;
+        height: 90px;
+        width: 100%;
+    }
+
+    .language__div {
+        width: 100%;
+        justify-content: center;
+        height: 60px;
+    }
+
+    .language {
+        font-size: 16px;
+    }
+
+    .checkbox__text {
+        font-size: 16px;
+    }
+
+    .add__new {
+        width: 100%;
+        justify-content: center;
+        height: 100%;
+        padding-block: 10px;
+    }
+
+    .add__new__text {
+        font-size: 16px;
+    }
+
 }
