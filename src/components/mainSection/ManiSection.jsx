@@ -8,7 +8,7 @@ import Loader from "../loader/Loader";
 const ManiSection = () => {
   const [clicked, setClicked] = useState(false);
   const [clear, setClear] = useState(false);
-  const [loader, setLoader] = useState(true);
+  const [loader, setLoader] = useState(false);
   const [percents, setPercents] = useState(0);
 
   useEffect(() => {
