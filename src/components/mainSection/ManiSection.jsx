@@ -3,11 +3,12 @@ import React, { useEffect, useState } from "react";
 import "./mainSection.css";
 import SectionHeader from "./section-header/SectionHeader";
 import TextSection from "./text-section/TextSection";
+import Loader from "../loader/Loader";
 
 const ManiSection = () => {
   const [clicked, setClicked] = useState(false);
   const [clear, setClear] = useState(false);
-  const [loader, setLoader] = useState(false);
+  const [loader, setLoader] = useState(true);
   const [percents, setPercents] = useState(0);
 
   useEffect(() => {
@@ -17,46 +18,28 @@ const ManiSection = () => {
           if (prev >= 100) {
             clearInterval(interval);
             setPercents(0);
-            setLoader(false); // Loader არ გვჭირდება როცა 100%
-            // return 100;
+            setLoader(false);
           }
-          return prev + 1; // გაიზრდება 1%-ით
+          return prev + 1;
         });
-      }, 100); // აქ 50მს = 0.05s, შეგიძლია უფრო ნელა ან სწრაფად
+      }, 100);
       return () => clearInterval(interval);
     }
   }, [loader]);
 
   return (
     <section className="main__section">
+      {loader && <div className="background"></div>}
+
       <SectionHeader clicked={clicked} clear={clear} setClear={setClear} />
-      {loader ? (
-        <div className="loader">
-          <div className="circle__loader"></div>
 
-          <div className="loader__text">
-            <p className="loader__text__one helvetica_font">
-              Converting...Thank you For your Patience
-            </p>
-
-            <div className="percents__slide">
-              <span className="loader__percents helvetica_font">
-                {percents}%
-              </span>
-              <div className="slider"></div>
-            </div>
-          </div>
-        </div>
-      ) : (
-        <TextSection
-          clicked={clicked}
-          setClicked={setClicked}
-          clear={clear}
-          setClear={setClear}
-          loader={loader}
-          setLoader={setLoader}
-        />
-      )}
+      {loader && <Loader percents={percents} />}
+      <TextSection
+        setClicked={setClicked}
+        clear={clear}
+        setClear={setClear}
+        setLoader={setLoader}
+      />
     </section>
   );
 };

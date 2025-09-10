@@ -38,35 +38,9 @@ const TextSection = ({ setClicked, clear, setClear, loader, setLoader }) => {
     setClear(false);
   }, [clear, setClear]);
 
-  // let compareText = () => {
-  //   const firstWords = values.first.match(/[\wა-ჰ]+|[^\s\w]/g) || [];
-  //   const secondWords = values.second.match(/[\wა-ჰ]+|[^\s\w]/g) || [];
-
-  //   // პირველი ტექსტის გამოკვეთა
-  //   const highlightedFirst = firstWords
-  //     .map((word, i) => {
-  //       if (secondWords[i] !== word) {
-  //         return `<span class="highlighted_left">${word}</span>`;
-  //       }
-  //       return word;
-  //     })
-  //     .join(" ");
-
-  //   const highlightedSecond = secondWords
-  //     .map((word, i) => {
-  //       if (firstWords[i] !== word) {
-  //         return `<span class="highlighted_right">${word}</span>`;
-  //       }
-  //       return word;
-  //     })
-  //     .join(" ");
-
-  //   if (firstRef.current) firstRef.current.innerHTML = highlightedFirst;
-  //   if (secondRef.current) secondRef.current.innerHTML = highlightedSecond;
-  // };
-
   return (
-    <section className="text__section">
+    <section className={`text__section ${loader ? "hidden" : ""}`}>
+      
       <div className="textarea__div">
         <div
           ref={firstRef}

@@ -8,6 +8,7 @@
     margin-top: 24px;
 }
 
+
 .textarea__div {
     display: flex;
     column-gap: 30px;
@@ -104,8 +105,4 @@
     .textarea {
         height: 190px;
     }
-}
-
-.hidden {
-    display: none;
 }
