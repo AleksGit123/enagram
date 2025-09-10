@@ -16,8 +16,7 @@
     align-items: center;
 }
 
-textarea {
-    resize: none;
+.textarea {
     height: 100%;
     width: 100%;
     background-color: #F0F7FF;
@@ -29,6 +28,27 @@ textarea {
     font-weight: 400;
     color: #383A48;
 }
+
+.highlighted_left {
+    color: green;
+}
+
+.highlighted_right {
+    color: red;
+}
+
+
+.textarea::before {
+    display: block;
+    position: absolute;
+    content: "დაიწყე წერა...";
+    color: #383a48ad;
+}
+
+.textarea.has_content::before {
+    display: none;
+}
+
 
 .double__arrow {
     width: 32px;
@@ -81,7 +101,11 @@ textarea {
         transform: rotateZ(90deg);
     }
 
-    textarea {
+    .textarea {
         height: 190px;
     }
+}
+
+.hidden {
+    display: none;
 }
