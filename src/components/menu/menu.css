@@ -18,6 +18,7 @@
 }
 
 .burger__menu {
+    display: none;
     cursor: pointer;
 }
 
@@ -119,5 +120,8 @@
 
     .account {
         display: none;
+    }
+    .burger__menu{
+        display: block;
     }
 }
